@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <div class="register-page" style="background-color:  #becada;">
+     <div class=" register-container">
+    <h2>Create Account</h2>
+
+    <form id="registerForm">
+
+        <div class="input-group-signup">
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" id="name" required>
+        </div>
+
+        <div class="input-group-signup">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" id="email" required>
+        </div>
+
+        <div class="input-group-signup" >
+            <label>Password</label>
+            <input type="password" placeholder="Enter password" id="password" required>
+        </div>
+        <button type="submit" class="signup-btn">Register</button>
+
+    </form>
+     <p class="login-link">
+            Already have an account? <a href="login.html">Login</a>
+        </p>
+</div>
+
+   </div>
+   <script type="module" src="../js/register.js" ></script>
+</body>
+</html>
