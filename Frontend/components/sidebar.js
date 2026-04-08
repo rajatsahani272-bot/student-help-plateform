@@ -28,7 +28,7 @@ async function loadSidebar() {
 
   if (!container) return;
 
-  const res = await fetch("../components/sidebar.html");
+  const res = await fetch("./components/sidebar.html");
   const data = await res.text();
 
   container.innerHTML = data;

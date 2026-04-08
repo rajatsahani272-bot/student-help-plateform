@@ -3,7 +3,7 @@ document.addEventListener("click", (e) => {
 
   //  Login button
   if (e.target.classList.contains("login-button")) {
-    window.location.href = "./pages/login.html";
+    window.location.href = "login.html";
   }
   
   // card-img
