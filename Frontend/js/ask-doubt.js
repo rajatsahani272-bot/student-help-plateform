@@ -16,7 +16,7 @@ async function askAI() {
     thinkingMsg.innerText = "Processing...";
     chatBox.appendChild(thinkingMsg);
 
-    const res = await fetch("http://localhost:5000/api/ai", {
+    const res = await fetch("https://student-help-plateform.onrender.com//api/ai", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

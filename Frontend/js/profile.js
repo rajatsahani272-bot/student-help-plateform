@@ -2,7 +2,7 @@ const token = localStorage.getItem("token");
 
 console.log("TOKEN:", token); // 🔥 debug
 
-fetch("http://localhost:5000/api/user/profile", {
+fetch("https://student-help-plateform.onrender.com/api/user/profile", {
   headers: {
     Authorization: "Bearer " + token
   }
