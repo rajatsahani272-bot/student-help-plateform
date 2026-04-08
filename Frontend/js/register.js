@@ -17,7 +17,7 @@ form.addEventListener("submit", async (e) => {
 
    if (data._id) {
   alert("Register Successful");
-  window.location.href = "../pages/login.html";
+  window.location.href = "../login.html";
 } else {
   alert("Error occurred");
 }

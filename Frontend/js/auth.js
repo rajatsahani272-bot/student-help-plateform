@@ -3,7 +3,7 @@ import BASE_URL from "./api.js";
 
 // REGISTER
 export async function registerUser(name, email, password) {
-  const res = await fetch(`${BASE_URL}/auth/register`, {
+  const res = await fetch("https://student-help-plateform.onrender.com/auth/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -16,7 +16,7 @@ export async function registerUser(name, email, password) {
 
 // LOGIN
 export async function loginUser(email, password) {
-  const res = await fetch(`${BASE_URL}/auth/login`, {
+  const res = await fetch("https://student-help-plateform.onrender.com/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
