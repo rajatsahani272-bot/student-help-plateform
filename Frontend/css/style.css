@@ -194,6 +194,11 @@ button:hover {
    background-color: #3B82F6;
    color: white;
 }
+.btn-1 a{
+    text-decoration: none;
+    background: transparent;
+    color: white;
+}
 .button-section{
     display: flex;
     justify-content: end;
@@ -235,10 +240,10 @@ hr{
     height: 260px;
 }
 .chat-img{
-    padding-top: 1rem;
     height: 260px;
-    width: 100%;
+    width: 100;
     object-fit: contain;
+    border-radius: 2.1rem;
 }
 .ask-doubts-img ,.resources-img{
     object-fit: contain;

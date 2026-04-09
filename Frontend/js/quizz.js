@@ -34,14 +34,15 @@ function showQuestion() {
 
   box.innerHTML = `
     <h3>Q${currentIndex + 1}: ${decodeHTML(q.question)}</h3>
-    ${options.map(opt => `
-      <label>
-        <input type="radio" name="q" value="${opt}"
-          ${answers[currentIndex] === opt ? "checked" : ""}
-        >
-        ${decodeHTML(opt)}
-      </label>
-    `).join("")}
+   ${options.map(opt => `
+  <label>
+ <input type="radio" name="q" value="${decodeHTML(opt)}"
+  onchange="saveAnswer()"
+  ${answers[currentIndex] === decodeHTML(opt) ? "checked" : ""}
+>
+    ${decodeHTML(opt)}
+  </label>
+`).join("")}
   `;
 
   updateProgress();
@@ -66,7 +67,7 @@ function prevQuestion() {
 function saveAnswer() {
   const selected = document.querySelector('input[name="q"]:checked');
   if (selected) {
-    answers[currentIndex] = selected.value;
+    answers[currentIndex] = selected.value.trim();
   }
 }
 
@@ -99,15 +100,19 @@ function submitQuiz() {
   let score = 0;
 
   questions.forEach((q, i) => {
-    if (answers[i] === q.correct_answer) {
+    if (decodeHTML(answers[i]) === decodeHTML(q.correct_answer)) {
       score++;
     }
   });
+  console.log("Answers:", answers);
+console.log("Correct:", questions.map(q => q.correct_answer));
 
+  
+  
   document.getElementById("quizContainer").classList.add("hidden");
 
   document.getElementById("resultBox").innerHTML = `
-    <h2>🎉 Your Score: ${score}/${questions.length}</h2>
+    <h2>Your Score: ${score}/${questions.length}</h2>
     <button onclick="startQuiz()">Restart Quiz</button>
   `;
 }
