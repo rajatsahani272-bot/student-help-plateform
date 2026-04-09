@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://student-help-plateform-5kfp-iz1m1oxzs.vercel.app/";
 
 //  render function (NEW)
 function renderJobs(data) {
