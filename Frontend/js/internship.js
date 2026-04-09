@@ -26,7 +26,7 @@ function renderJobs(data) {
 //  load internships
 async function loadInternships() {
   try {
-    const res = await fetch(`${BASE_URL}api/internships`);
+    const res = await fetch(`${BASE_URL}/api/internships`);
     const data = await res.json();
 
     renderJobs(data);
@@ -41,7 +41,7 @@ async function saveJob(id) {
   try {
     const token = localStorage.getItem("token");
 
-    const res = await fetch(`${BASE_URL}api/internships/${id}/save`, {
+    const res = await fetch(`${BASE_URL}/api/internships/${id}/save`, {
       method: "POST",
       headers: {
         "Authorization": "Bearer " + token
@@ -64,7 +64,7 @@ if (searchInput) {
   searchInput.addEventListener("input", async (e) => {
     const value = e.target.value.toLowerCase();
 
-    const res = await fetch(`${BASE_URL}api/internships`);
+    const res = await fetch(`${BASE_URL}/api/internships`);
     const data = await res.json();
 
     const filtered = data.filter(job =>
