@@ -1,4 +1,4 @@
-const BASE_URL = "https://student-help-plateform.onrender.com/api/internships";
+const BASE_URL = "https://student-help-plateform.onrender.com";
 
 //  render function (NEW)
 function renderJobs(data) {
